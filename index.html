@@ -1,62 +1,391 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Consulta de Informações e Condições</title>
-<meta name="description" content="Consulte informações, requisitos e condições de forma simples e transparente. Confira os detalhes antes de prosseguir.">
-<meta name="robots" content="index,follow">
-<style>
-:root{--p:#a91863;--pd:#85124e;--soft:#f9edf4;--text:#211a20;--muted:#6e6670;--border:#e8e2e6}
-*{margin:0;padding:0;box-sizing:border-box}
-body{min-height:100vh;min-height:100svh;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text);background:linear-gradient(180deg,rgba(42,10,32,.66),rgba(125,20,78,.48)),url("fundo.jpg") center/cover fixed no-repeat;display:flex;align-items:center;justify-content:center;padding:20px}
-.container{width:100%;max-width:455px}
-.card{position:relative;overflow:hidden;background:#fff;border-radius:28px;padding:34px 25px 24px;box-shadow:0 28px 80px rgba(25,6,19,.34);animation:show .55s ease both}
-@keyframes show{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
-.top-line{position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#951052,#d62a7d)}
-.icon{width:64px;height:64px;margin:7px auto 17px;border-radius:20px;background:var(--soft);color:var(--p);display:flex;align-items:center;justify-content:center;font-size:29px;font-weight:900}
-.badge{display:table;margin:0 auto 17px;padding:7px 12px;border-radius:999px;background:#f9e8f1;color:#94104f;font-size:11px;font-weight:800;letter-spacing:.7px}
-h1{text-align:center;font-size:34px;line-height:1.1;letter-spacing:-1.1px;font-weight:850;margin-bottom:16px}
-h1 span{color:var(--p)}
-.intro{text-align:center;color:var(--muted);font-size:16px;line-height:1.55;max-width:355px;margin:0 auto 23px}
-.info-box{display:flex;gap:11px;align-items:flex-start;background:#faf8fa;border:1px solid var(--border);border-radius:14px;padding:13px 14px;margin-bottom:16px}
-.info-icon{flex:0 0 auto;width:23px;height:23px;border-radius:50%;background:#ead6e1;color:var(--p);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900}
-.info-box p{color:#5f5860;font-size:12px;line-height:1.5}
-.cta{display:flex;align-items:center;justify-content:center;width:100%;min-height:62px;border-radius:16px;background:linear-gradient(135deg,#d72b7d,#a9155e);color:#fff;text-decoration:none;font-size:19px;font-weight:800;box-shadow:0 12px 28px rgba(169,24,99,.26);transition:.2s ease}
-.cta:hover{background:linear-gradient(135deg,#c92370,#8f104f);transform:translateY(-2px)}
-.arrow{margin-left:9px;font-size:22px;transition:transform .2s ease}.cta:hover .arrow{transform:translateX(4px)}
-.status{display:flex;justify-content:center;align-items:center;gap:7px;margin-top:14px;color:#777078;font-size:11px}
-.status-dot{width:7px;height:7px;border-radius:50%;background:#238657}
-.divider{height:1px;background:var(--border);margin:22px 0 15px}
-.legal{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 17px}.legal a{color:#7d3158;font-size:11px;text-decoration:none}.legal a:hover{text-decoration:underline}
-.footer-note{margin-top:14px;text-align:center;color:#9a939a;font-size:10px;line-height:1.55}
-@media(max-width:390px){body{padding:12px}.card{padding:29px 18px 21px;border-radius:25px}h1{font-size:30px}.intro{font-size:15px}.cta{min-height:59px;font-size:18px}}
-@media(min-width:700px){.container{max-width:475px}.card{padding:44px 38px 28px}h1{font-size:40px}.intro{font-size:17px}}
-@media(prefers-reduced-motion:reduce){.card{animation:none}.cta{transition:none}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FORÇA+ | Produtos e Acessórios para Academia</title>
+  <meta name="description" content="Encontre equipamentos, acessórios e itens para treino em um só lugar. Informações claras sobre produtos, pagamento, entrega, trocas e atendimento.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#111111">
+  <link rel="canonical" href="https://www.seudominio.com.br/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="FORÇA+ | Produtos e Acessórios para Academia">
+  <meta property="og:description" content="Equipamentos e acessórios para seus treinos, com informações claras e atendimento.">
+  <meta property="og:url" content="https://www.seudominio.com.br/">
+
+  <!-- Dados estruturados: substitua os dados fictícios pelos dados reais da empresa. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "FORÇA+",
+    "url": "https://www.seudominio.com.br/",
+    "description": "Loja de produtos e acessórios para academia."
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg:#0b0b0b; --surface:#151515; --surface-2:#1d1d1d;
+      --text:#f6f6f6; --muted:#b9b9b9; --accent:#c8ff00;
+      --border:#2c2c2c; --max:1180px; --radius:18px;
+    }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body {
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:var(--bg); color:var(--text); line-height:1.6;
+    }
+    a { color:inherit; text-decoration:none; }
+    img { max-width:100%; display:block; }
+    .container { width:min(92%,var(--max)); margin:auto; }
+    .topbar { background:#050505; border-bottom:1px solid var(--border); font-size:.86rem; color:var(--muted); }
+    .topbar .container { display:flex; justify-content:center; padding:8px 0; text-align:center; }
+    header { position:sticky; top:0; z-index:50; background:rgba(11,11,11,.94); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); }
+    nav { min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .logo { font-size:1.45rem; font-weight:900; letter-spacing:-.04em; }
+    .logo span { color:var(--accent); }
+    .navlinks { display:flex; gap:22px; list-style:none; }
+    .navlinks a { color:#ddd; font-size:.95rem; }
+    .navlinks a:hover { color:var(--accent); }
+    .menu { display:none; background:none; color:white; border:0; font-size:1.6rem; cursor:pointer; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; border-radius:10px; padding:13px 20px; font-weight:800; border:1px solid transparent; cursor:pointer; transition:.2s; }
+    .btn-primary { background:var(--accent); color:#090909; }
+    .btn-primary:hover { transform:translateY(-1px); filter:brightness(1.05); }
+    .btn-outline { border-color:#555; color:white; background:transparent; }
+    .btn-outline:hover { border-color:var(--accent); color:var(--accent); }
+
+    .hero { padding:78px 0 60px; background:
+      radial-gradient(circle at 80% 20%, rgba(200,255,0,.11), transparent 32%),
+      linear-gradient(180deg,#111,#0b0b0b); }
+    .hero-grid { display:grid; grid-template-columns:1.05fr .95fr; gap:50px; align-items:center; }
+    .eyebrow { color:var(--accent); text-transform:uppercase; letter-spacing:.15em; font-size:.78rem; font-weight:900; margin-bottom:12px; }
+    h1 { font-size:clamp(2.4rem,5vw,4.8rem); line-height:.98; letter-spacing:-.055em; max-width:760px; }
+    .hero p { color:var(--muted); font-size:1.1rem; max-width:650px; margin:22px 0 28px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; }
+    .hero-card { min-height:380px; border:1px solid var(--border); border-radius:28px; background:
+      linear-gradient(135deg,rgba(200,255,0,.12),transparent 42%),
+      var(--surface); display:flex; align-items:end; padding:28px; }
+    .hero-card-content { width:100%; padding:22px; background:rgba(0,0,0,.55); border:1px solid #333; border-radius:18px; }
+    .hero-card h2 { font-size:1.6rem; margin-bottom:7px; }
+    .hero-card p { margin:0; font-size:.95rem; }
+
+    section { padding:72px 0; }
+    .section-head { display:flex; justify-content:space-between; align-items:end; gap:20px; margin-bottom:28px; }
+    .section-head h2 { font-size:clamp(1.8rem,3vw,2.7rem); line-height:1.05; }
+    .section-head p { color:var(--muted); max-width:560px; }
+    .categories { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+    .category { padding:25px; border:1px solid var(--border); border-radius:var(--radius); background:var(--surface); min-height:160px; }
+    .category strong { display:block; font-size:1.1rem; margin:12px 0 5px; }
+    .category span { color:var(--muted); font-size:.9rem; }
+    .icon { font-size:1.9rem; }
+
+    .products { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+    .product { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; display:flex; flex-direction:column; }
+    .product-image { aspect-ratio:1/1; display:grid; place-items:center; background:linear-gradient(135deg,#242424,#111); font-size:3.4rem; }
+    .product-body { padding:18px; display:flex; flex-direction:column; flex:1; }
+    .tag { display:inline-block; color:#0b0b0b; background:var(--accent); border-radius:999px; padding:4px 9px; font-size:.7rem; font-weight:900; width:max-content; text-transform:uppercase; }
+    .product h3 { margin:11px 0 6px; font-size:1.08rem; }
+    .product p { color:var(--muted); font-size:.88rem; flex:1; }
+    .price { font-size:1.25rem; font-weight:900; margin:14px 0; }
+    .product .btn { width:100%; }
+
+    .trust { background:#101010; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+    .trust-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+    .trust-item { padding:15px 0; }
+    .trust-item strong { display:block; margin-bottom:4px; }
+    .trust-item span { color:var(--muted); font-size:.88rem; }
+
+    .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:start; }
+    .about-box { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:28px; }
+    .about-box h3 { margin-bottom:10px; }
+    .about-box p, .about-box li { color:var(--muted); }
+    .about-box ul { padding-left:20px; margin-top:12px; }
+
+    .faq { max-width:900px; margin:auto; }
+    details { border-bottom:1px solid var(--border); padding:18px 0; }
+    summary { cursor:pointer; font-weight:800; }
+    details p { color:var(--muted); margin-top:10px; }
+
+    .contact { background:var(--surface); border:1px solid var(--border); border-radius:24px; padding:34px; }
+    .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:30px; }
+    .contact p { color:var(--muted); margin:8px 0; }
+    .contact a { color:var(--accent); }
+
+    footer { border-top:1px solid var(--border); padding:45px 0 25px; background:#070707; }
+    .footer-grid { display:grid; grid-template-columns:1.3fr 1fr 1fr 1fr; gap:30px; }
+    footer h3 { margin-bottom:10px; }
+    footer p, footer li { color:var(--muted); font-size:.88rem; }
+    footer ul { list-style:none; display:grid; gap:7px; }
+    footer a:hover { color:var(--accent); }
+    .legal { margin-top:35px; padding-top:18px; border-top:1px solid var(--border); display:flex; justify-content:space-between; gap:15px; color:#888; font-size:.78rem; }
+
+    .cookie { position:fixed; left:18px; right:18px; bottom:18px; z-index:100; max-width:850px; margin:auto; padding:18px; border:1px solid #444; background:#121212; border-radius:16px; box-shadow:0 15px 50px rgba(0,0,0,.5); display:none; }
+    .cookie p { color:#bbb; font-size:.85rem; }
+    .cookie-actions { display:flex; gap:10px; margin-top:12px; }
+
+    @media (max-width:900px) {
+      .hero-grid,.about-grid,.contact-grid { grid-template-columns:1fr; }
+      .categories,.products { grid-template-columns:repeat(2,1fr); }
+      .trust-grid { grid-template-columns:repeat(2,1fr); }
+      .footer-grid { grid-template-columns:repeat(2,1fr); }
+      .navlinks { display:none; position:absolute; top:72px; left:0; right:0; background:#0b0b0b; border-bottom:1px solid var(--border); padding:20px; flex-direction:column; }
+      .navlinks.open { display:flex; }
+      .menu { display:block; }
+    }
+    @media (max-width:560px) {
+      .categories,.products,.trust-grid,.footer-grid { grid-template-columns:1fr; }
+      section { padding:55px 0; }
+      .hero { padding-top:55px; }
+      .hero-card { min-height:290px; }
+      .legal { flex-direction:column; }
+    }
+  </style>
 </head>
+
 <body>
-<main class="container">
-<section class="card" aria-labelledby="titulo">
-<div class="top-line" aria-hidden="true"></div>
-<div class="icon" aria-hidden="true">✓</div>
-<div class="badge">CONSULTA ONLINE</div>
-<h1 id="titulo">Consulte informações e veja as <span>condições disponíveis</span></h1>
-<p class="intro">Acesse a página de consulta para conferir informações, requisitos e condições de forma simples e transparente.</p>
-<div class="info-box">
-<div class="info-icon" aria-hidden="true">i</div>
-<p>As condições podem variar de acordo com o perfil, região, disponibilidade e critérios informados na página de destino.</p>
-</div>
-<a class="cta" href="https://tiny-puppy-desenrola.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Acessar página de consulta">Acessar consulta <span class="arrow" aria-hidden="true">→</span></a>
-<div class="status"><span class="status-dot" aria-hidden="true"></span>Processo online e informativo</div>
-<div class="divider"></div>
-<nav class="legal" aria-label="Informações legais">
-<a href="/politica-de-privacidade.html">Política de Privacidade</a>
-<a href="/termos.html">Termos de Uso</a>
-<a href="/contato.html">Contato</a>
-</nav>
-<p class="footer-note">Esta página tem caráter informativo. Não há garantia de aprovação, concessão ou disponibilidade de qualquer benefício ou condição. Consulte os critérios e informações apresentados no site de destino.</p>
-</section>
-</main>
+  <div class="topbar">
+    <div class="container">Compra segura • Atendimento • Informações claras sobre produtos, entrega e trocas</div>
+  </div>
+
+  <header>
+    <nav class="container" aria-label="Navegação principal">
+      <a class="logo" href="#inicio" aria-label="FORÇA+ início">FORÇA<span>+</span></a>
+      <button class="menu" aria-label="Abrir menu" aria-expanded="false" onclick="toggleMenu()">☰</button>
+      <ul class="navlinks" id="navlinks">
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#categorias">Categorias</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#faq">Dúvidas</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <a class="btn btn-primary" href="#produtos">Ver produtos</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Treino • Equipamentos • Acessórios</div>
+          <h1>Produtos para treinar com mais praticidade.</h1>
+          <p>Encontre equipamentos e acessórios para academia, treino em casa e rotina fitness. Compare características e escolha de acordo com suas necessidades.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#produtos">Conhecer produtos</a>
+            <a class="btn btn-outline" href="#contato">Falar com atendimento</a>
+          </div>
+        </div>
+        <div class="hero-card" aria-label="Destaque da loja">
+          <div class="hero-card-content">
+            <h2>Escolha pelo seu objetivo de treino</h2>
+            <p>Pesos, acessórios, mobilidade e itens de apoio. Consulte disponibilidade, preço, prazo e condições antes da compra.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="categorias">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="eyebrow">Categorias</div><h2>Encontre o que procura</h2></div>
+          <p>Organização simples para facilitar a navegação e levar o visitante rapidamente ao produto anunciado.</p>
+        </div>
+        <div class="categories">
+          <a class="category" href="#produtos"><div class="icon">🏋️</div><strong>Pesos e musculação</strong><span>Halteres, barras e acessórios.</span></a>
+          <a class="category" href="#produtos"><div class="icon">🧘</div><strong>Mobilidade</strong><span>Itens para alongamento e recuperação.</span></a>
+          <a class="category" href="#produtos"><div class="icon">🎒</div><strong>Acessórios</strong><span>Luvas, straps, cintos e apoio.</span></a>
+          <a class="category" href="#produtos"><div class="icon">🏠</div><strong>Treino em casa</strong><span>Itens compactos para sua rotina.</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="produtos">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="eyebrow">Produtos</div><h2>Seleção em destaque</h2></div>
+          <p>Os exemplos abaixo devem ser substituídos pelos produtos reais, preços reais, imagens reais e condições reais da sua loja.</p>
+        </div>
+
+        <div class="products">
+          <article class="product">
+            <div class="product-image" role="img" aria-label="Imagem ilustrativa de halteres">🏋️</div>
+            <div class="product-body">
+              <span class="tag">Destaque</span>
+              <h3>Kit de Halteres</h3>
+              <p>Conjunto para exercícios de resistência. Verifique pesos, materiais e itens inclusos na página do produto.</p>
+              <div class="price">A partir de R$ 00,00</div>
+              <a class="btn btn-primary" href="#contato">Consultar produto</a>
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="product-image" role="img" aria-label="Imagem ilustrativa de faixa elástica">〰️</div>
+            <div class="product-body">
+              <span class="tag">Acessório</span>
+              <h3>Kit de Faixas Elásticas</h3>
+              <p>Opção compacta para exercícios variados. Confira resistência, dimensões e composição antes da compra.</p>
+              <div class="price">A partir de R$ 00,00</div>
+              <a class="btn btn-primary" href="#contato">Consultar produto</a>
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="product-image" role="img" aria-label="Imagem ilustrativa de colchonete">🧘</div>
+            <div class="product-body">
+              <span class="tag">Treino</span>
+              <h3>Colchonete Fitness</h3>
+              <p>Superfície de apoio para exercícios no chão. Consulte espessura, tamanho e material do produto.</p>
+              <div class="price">A partir de R$ 00,00</div>
+              <a class="btn btn-primary" href="#contato">Consultar produto</a>
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="product-image" role="img" aria-label="Imagem ilustrativa de corda de pular">🪢</div>
+            <div class="product-body">
+              <span class="tag">Cardio</span>
+              <h3>Corda de Pular</h3>
+              <p>Acessório para exercícios cardiovasculares. Confira comprimento, ajuste e especificações.</p>
+              <div class="price">A partir de R$ 00,00</div>
+              <a class="btn btn-primary" href="#contato">Consultar produto</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust">
+      <div class="container trust-grid">
+        <div class="trust-item"><strong>Informação transparente</strong><span>Características, condições e preços devem refletir a oferta real.</span></div>
+        <div class="trust-item"><strong>Compra consciente</strong><span>Confira especificações e compatibilidade antes de comprar.</span></div>
+        <div class="trust-item"><strong>Atendimento</strong><span>Canal para dúvidas sobre produtos, pedidos e condições.</span></div>
+        <div class="trust-item"><strong>Políticas acessíveis</strong><span>Consulte privacidade, trocas, devoluções e entrega.</span></div>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="container about-grid">
+        <div>
+          <div class="eyebrow">Sobre a empresa</div>
+          <h2>Uma loja feita para facilitar sua escolha.</h2>
+          <p style="color:var(--muted);margin-top:16px">A FORÇA+ apresenta produtos para diferentes rotinas de treino, com foco em informações objetivas e navegação simples.</p>
+        </div>
+        <div class="about-box">
+          <h3>Antes de publicar</h3>
+          <ul>
+            <li>Substitua todos os dados fictícios pelos dados reais da empresa.</li>
+            <li>Use fotos próprias/licenciadas e descrições verdadeiras.</li>
+            <li>Informe preço, frete, prazo e condições de pagamento de forma clara.</li>
+            <li>Publique políticas reais de privacidade, entrega, troca e devolução.</li>
+            <li>Garanta que o domínio do anúncio seja o mesmo destino acessado pelo usuário.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="eyebrow">FAQ</div><h2>Perguntas frequentes</h2></div>
+        </div>
+        <div class="faq">
+          <details><summary>Como faço uma compra?</summary><p>Selecione um produto, confira as informações da oferta e siga o processo de compra disponibilizado pela loja. Não anuncie um fluxo de checkout que ainda não esteja funcionando.</p></details>
+          <details><summary>Os preços e estoques são reais?</summary><p>Os preços e estoques devem ser atualizados de acordo com a operação real da loja. Não mantenha valores fictícios quando o site estiver sendo usado em campanhas.</p></details>
+          <details><summary>Qual é o prazo de entrega?</summary><p>O prazo deve ser informado conforme CEP, modalidade de envio e disponibilidade real. Evite prometer prazo universal quando ele variar por região.</p></details>
+          <details><summary>Como funcionam trocas e devoluções?</summary><p>Consulte a política oficial da loja. Ela deve refletir as regras aplicáveis ao negócio e ser apresentada de forma acessível antes da compra.</p></details>
+          <details><summary>Os produtos garantem resultados físicos?</summary><p>Não. Equipamentos e acessórios são ferramentas de treino e não devem ser apresentados como garantia de resultados individuais.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <div class="container">
+        <div class="contact">
+          <div class="contact-grid">
+            <div>
+              <div class="eyebrow">Contato</div>
+              <h2>Fale com a equipe</h2>
+              <p>Atendimento para dúvidas sobre produtos, pedidos, entrega e políticas da loja.</p>
+              <!-- SUBSTITUA pelos contatos reais -->
+              <p><strong>E-mail:</strong> <a href="mailto:contato@seudominio.com.br">contato@seudominio.com.br</a></p>
+              <p><strong>WhatsApp:</strong> <a href="https://wa.me/5500000000000" rel="noopener">Adicionar número real</a></p>
+            </div>
+            <div>
+              <h3>Dados da empresa</h3>
+              <p><strong>Razão social:</strong> NOME REAL DA EMPRESA</p>
+              <p><strong>CNPJ:</strong> 00.000.000/0000-00</p>
+              <p><strong>Endereço:</strong> ENDEREÇO COMERCIAL REAL</p>
+              <p><strong>Horário:</strong> INFORMAR HORÁRIO REAL DE ATENDIMENTO</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Páginas jurídicas: troque os textos pelos documentos reais da empresa e, de preferência,
+         publique cada política em uma URL própria antes de anunciar. -->
+    <section id="politicas">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="eyebrow">Transparência</div><h2>Políticas da loja</h2></div>
+          <p>Links visíveis para informações que ajudam o consumidor a tomar uma decisão informada.</p>
+        </div>
+        <div class="categories">
+          <a class="category" href="/privacidade.html"><strong>Política de Privacidade</strong><span>Como dados pessoais são tratados.</span></a>
+          <a class="category" href="/trocas-e-devolucoes.html"><strong>Trocas e Devoluções</strong><span>Regras e procedimentos aplicáveis.</span></a>
+          <a class="category" href="/entrega.html"><strong>Entrega e Frete</strong><span>Prazos, regiões e modalidades.</span></a>
+          <a class="category" href="/termos.html"><strong>Termos de Uso</strong><span>Condições de utilização do site.</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div><h3>FORÇA<span style="color:var(--accent)">+</span></h3><p>Produtos e acessórios para academia, com informações claras e atendimento.</p></div>
+        <div><h3>Comprar</h3><ul><li><a href="#produtos">Produtos</a></li><li><a href="#categorias">Categorias</a></li><li><a href="#faq">Dúvidas</a></li></ul></div>
+        <div><h3>Empresa</h3><ul><li><a href="#sobre">Sobre</a></li><li><a href="#contato">Contato</a></li><li><a href="#politicas">Políticas</a></li></ul></div>
+        <div><h3>Legal</h3><ul><li><a href="/privacidade.html">Privacidade</a></li><li><a href="/termos.html">Termos</a></li><li><a href="/trocas-e-devolucoes.html">Trocas e devoluções</a></li></ul></div>
+      </div>
+      <div class="legal"><span>© 2026 FORÇA+. Todos os direitos reservados.</span><span>Substitua os dados fictícios antes de publicar.</span></div>
+    </div>
+  </footer>
+
+  <div class="cookie" id="cookie">
+    <p>Usamos cookies necessários para o funcionamento do site. Cookies opcionais de análise ou publicidade só devem ser ativados conforme sua política de privacidade e mecanismo de consentimento aplicável.</p>
+    <div class="cookie-actions">
+      <button class="btn btn-primary" onclick="acceptCookies()">Aceitar</button>
+      <button class="btn btn-outline" onclick="closeCookies()">Continuar sem opcionais</button>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navlinks');
+      const button = document.querySelector('.menu');
+      const open = nav.classList.toggle('open');
+      button.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+    document.querySelectorAll('#navlinks a').forEach(a => a.addEventListener('click', () => {
+      document.getElementById('navlinks').classList.remove('open');
+      document.querySelector('.menu').setAttribute('aria-expanded','false');
+    }));
+
+    function acceptCookies() {
+      localStorage.setItem('cookieChoice','accepted');
+      document.getElementById('cookie').style.display='none';
+    }
+    function closeCookies() {
+      localStorage.setItem('cookieChoice','minimal');
+      document.getElementById('cookie').style.display='none';
+    }
+    if (!localStorage.getItem('cookieChoice')) {
+      document.getElementById('cookie').style.display='block';
+    }
+  </script>
 </body>
 </html>
